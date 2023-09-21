@@ -1,10 +1,9 @@
-# pip install openai 
 import openai
 import config
 
 # Configura tu clave de API
-config.api_key1
-openai.api_key = config.api_key1
+openai.api_key = config.api_key1  # Utiliza la clave de API correctamente
+
 # Lista de palabras clave para terminar la conversación
 palabras_clave_terminar = ["salir", "adios", "chao", "cerrar", "finalizar", "terminar", ""]
 
@@ -22,7 +21,7 @@ while True:
     input_en_minusculas = usuario_input.lower()  # Convertir a minúsculas para hacer coincidencia sin importar mayúsculas o minúsculas
 
     if input_en_minusculas in palabras_clave_terminar:
-        print("gracias por usar este Humilde ChatBot")
+        print("Chatbot: Gracias por usar este humilde ChatBot")
         break
     respuesta = crear_respuesta(f"Tú: {usuario_input}\nChatbot:")
-    print("Chatbot:", respuesta)
+    print("Chatbot: ", respuesta)
